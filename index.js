@@ -17,13 +17,20 @@ const activeUsers = new Set();
 io.on("connection", function(socket) {
     console.log("Connection on!");
 
-    socket.on("joined", function(data) {
+    socket.on("player connect", function(data) {
         socket.userId = data;
         activeUsers.add(data);
+        io.emit("player connect", [...activeUsers]);
+    });
+
+    socket.on("player disconect", () => {
+        activeUsers.delete(socket.userId);
+        io.emit("player diconect", socket.userId);
     });
 
     socket.on("roll", function(data) {
         console.log(data);
-        //roll dice(s) and return result
+        data.rolled = 1 + Math.floor(Math.random() * data.sides);
+        io.emit("roll", data);
     });
 }); 

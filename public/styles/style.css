@@ -1,0 +1,15 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "history history history players" ". . . ." ". . . .";
+}
+  
+.history { grid-area: history; }
+  
+.players { grid-area: players; }
+
+.player-list {
+    border: 1px solid black;
+}

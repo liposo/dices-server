@@ -13,13 +13,18 @@ const newConnection = (player) => {
 }
 
 const addPlayerToList = (playerName) => {
+
+    if (!!document.querySelector(`.playerName-${playerName}`)) {
+        return;
+    }
+
     let newPlayer = createPlayer(playerName);
     playerList.appendChild(newPlayer);
 }
 
 function createPlayer(playerName) {
     let player = document.createElement('article');
-    player.className = "playerName" + playerName;
+    player.className = "playerName-" + playerName;
     let div = document.createElement('div');
     div.className = 'title';
 

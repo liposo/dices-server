@@ -28,13 +28,13 @@
   background-color: lightgray;
 }
 
+.roll:last-child {
+  background-color: aliceblue;
+}
+
 .roll {
   padding-left: 10px;
   padding-bottom: 10px;
-}
-
-.last-roll {
-  background-color: white;
 }
 
 .time {

@@ -1,15 +1,61 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas: "history history history players" ". . . ." ". . . .";
+/* Card grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
 }
-  
-.history { grid-area: history; }
-  
-.players { grid-area: players; }
 
-.player-list {
-    border: 1px solid black;
+/* Individual Card */
+.grid>article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.playerName {
+  padding-left: 10px;
+}
+
+.rolls {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roll-history {
+  overflow-y: auto;
+  height: 250px;
+  background-color: lightgray;
+}
+
+.roll {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.last-roll {
+  background-color: white;
+}
+
+.time {
+  color: gray;
+}
+
+.roll-text {
+  padding: 0;
+  margin: 0;
+}
+
+.roll-result {
+  color: green;
+  font-size: 1.2em;
+}
+
+.dice-sides,
+.number-of-dices {
+  color: red;
+}
+
+.form {
+  padding: 30px;
 }

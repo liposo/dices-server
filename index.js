@@ -18,6 +18,7 @@ io.on("connection", function(socket) {
     console.log("Connection on!");
 
     socket.on("player connect", function(data) {
+        console.log("Connectd: ", data);
         socket.userId = data;
         activeUsers.add(data);
         io.emit("player connect", [...activeUsers]);
@@ -30,7 +31,20 @@ io.on("connection", function(socket) {
 
     socket.on("roll", function(data) {
         console.log(data);
-        data.rolled = 1 + Math.floor(Math.random() * data.sides);
+
+        let sum = 0;
+        let rolls = [];
+
+        for(let i=0; i < data.quantity; i ++) {
+            let roll = 1 + Math.floor(Math.random() * data.sides);
+            console.log(roll);
+            sum += roll;
+            console.log(sum);
+            rolls.push(roll);
+        }
+        console.log(rolls);
+        data.rolled = sum;
+        data.rolls = rolls;
         io.emit("roll", data);
     });
 }); 

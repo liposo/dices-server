@@ -12,16 +12,86 @@
     <main class="grid">
     </main>
 
-    <form class="form">
-        <label for="sides">Sides: </label>
-        <input class="sides" id="sides" type="number" placeholder="6" value="6" />
-
-        <label for="quantity">Quantity: </label>
-        <input class="quantity" id="quantity" type="number" placeholder="1" value="1" />
-
-        <button class="send-button" type="submit">ROLL</button>
-    </form>
-
+    <main class="dices-grid">
+        <form class="formd4">
+            <div class="dice-wrapper">
+                <span class="dice-title">D4</span>
+                <div class="dice-image">Future placement of img</div>
+                <input class="input-sides" hidden type="text" value="4" />
+                <div class="quantity-wrapper">
+                    <div id="decrease" class="button-quantity decrease">-</div>
+                    <input class="quantity" id="quantity" min="0" name="quantity" value="1" type="number">
+                    <div id="increase" class="button-quantity increase">+</div>
+                </div>
+                <div class="button-roll">ROLL</div>
+            </div>
+        </form>
+        <form class="formd6">
+            <div class="dice-wrapper">
+                <span class="dice-title">D6</span>
+                <div class="dice-image">Future placement of img</div>
+                <input class="input-sides" hidden type="text" value="6" />
+                <div class="quantity-wrapper">
+                    <div id="decrease" class="button-quantity decrease">-</div>
+                    <input class="quantity" id="quantity" min="0" name="quantity" value="1" type="number">
+                    <div id="increase" class="button-quantity increase">+</div>
+                </div>
+                <div class="button-roll">ROLL</div>
+            </div>
+        </form>
+        <form class="formd8">
+            <div class="dice-wrapper">
+                <span class="dice-title">D8</span>
+                <div class="dice-image">Future placement of img</div>
+                <input class="input-sides" hidden type="text" value="8" />
+                <div class="quantity-wrapper">
+                    <div id="decrease" class="button-quantity decrease">-</div>
+                    <input class="quantity" id="quantity" min="0" name="quantity" value="1" type="number">
+                    <div id="increase" class="button-quantity increase">+</div>
+                </div>
+                <div class="button-roll">ROLL</div>
+            </div>
+        </form>
+        <form class="formd12">
+            <div class="dice-wrapper">
+                <span class="dice-title">D12</span>
+                <div class="dice-image">Future placement of img</div>
+                <input class="input-sides" hidden type="text" value="12" />
+                <div class="quantity-wrapper">
+                    <div id="decrease" class="button-quantity decrease">-</div>
+                    <input class="quantity" id="quantity" min="0" name="quantity" value="1" type="number">
+                    <div id="increase" class="button-quantity increase">+</div>
+                </div>
+                <div class="button-roll">ROLL</div>
+            </div>
+        </form>
+        <form class="formd20">
+            <div class="dice-wrapper">
+                <span class="dice-title">D20</span>
+                <div class="dice-image">Future placement of img</div>
+                <input class="input-sides" hidden type="text" value="20" />
+                <div class="quantity-wrapper">
+                    <div id="decrease" class="button-quantity decrease">-</div>
+                    <input class="quantity" id="quantity" min="0" name="quantity" value="1" type="number">
+                    <div id="increase" class="button-quantity increase">+</div>
+                </div>
+                <div class="button-roll">ROLL</div>
+            </div>
+        </form>
+        <form class="formdx">
+            <div class="dice-wrapper">
+                <span class="dice-title">D???</span>
+                <div class="dice-image">Future placement of img</div>
+                <input class="input-sides" type="text" id="sides" value="" placeholder="Sides"/>
+                <div class="quantity-wrapper">
+                    <div id="decrease" class="button-quantity decrease">-</div>
+                    <input class="quantity" id="quantity" min="0" name="quantity" value="1" type="number">
+                    <div id="increase" class="button-quantity increase">+</div>
+                </div>
+                <div class="button-roll">ROLL</div>
+            </div>
+        </form>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script src="js/main.js"></script>

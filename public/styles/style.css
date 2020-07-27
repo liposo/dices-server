@@ -4,6 +4,13 @@
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
+  margin-bottom: 10px;
+}
+
+.dices-grid {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 128px 0px 128px;
 }
 
 /* Individual Card */
@@ -58,4 +65,84 @@
 
 .form {
   padding: 30px;
+}
+
+.dice-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 125px;
+  height: 269px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.dice-title {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.dice-image {
+  margin: 20px;
+}
+
+.input-sides {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  width: 45%;
+  border: none;
+  border-bottom: 1px solid #757575;
+  text-align: center;
+}
+
+.input-sides:focus {
+  outline: none;
+}
+
+.quantity-wrapper {
+  display: flex;
+}
+
+/* it will support chrome and firefox */
+.quantity-wrapper input[type=number]::-webkit-inner-spin-button,
+.quantity-wrapper input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.quantity-wrapper input,
+.quantity-wrapper div {
+  margin-top: 10px;
+  width: 100%;
+  padding: .5em;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 900;
+  background: white;
+  border: 1px solid #aaa;
+}
+
+.quantity-wrapper input {
+  border-left: none;
+  border-right: none;
+}
+
+.button-quantity:hover {
+  cursor: pointer;
+}
+
+.button-roll {
+  height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: white;
+}
+
+.button-roll:hover {
+  cursor: pointer;
+  background-color: darkseagreen;
 }
